@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2023 the original author or authors.
+ * Copyright (c) 2022 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,32 +24,18 @@
 
 package com.bernardomg.api.response;
 
+import com.bernardomg.api.sort.Sort;
+
 /**
- * Greeter class.
- * <p>
- * This is just a placeholder class which may be safely removed.
- * <p>
- * Pay attention to the fact that this is used on the placeholder tests too
+ * Paginated response to the frontend.
  *
- * @author Bernardo Martínez Garrido
+ * @author Bernardo Mart&iacute;nez Garrido
+ *
+ * @param <T>
+ *            response content type
  */
+public interface SortedResponse<T> extends Response<T> {
 
-public final class Greeter {
-
-    /**
-     * Default constructor.
-     */
-    public Greeter() {
-        super();
-    }
-
-    /**
-     * Returns a greeting.
-     *
-     * @return a greeting
-     */
-    public String sayHello() {
-        return "Hello World!";
-    }
+    public Iterable<Sort> getSorting();
 
 }

@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2023 the original author or authors.
+ * Copyright (c) 2022 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,8 +21,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**
- * Provides placeholder unit tests.
- */
-package com.bernardomg.api.response.test.unit;
 
+package com.bernardomg.api.response;
+
+import com.bernardomg.api.error.Error;
+
+/**
+ * Error response to the frontend.
+ *
+ * @author Bernardo Mart&iacute;nez Garrido
+ */
+public interface ErrorResponse<T> extends Response<T> {
+
+    public Error getError();
+}

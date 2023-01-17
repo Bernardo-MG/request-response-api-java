@@ -21,8 +21,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**
- * Response model.
- */
 
 package com.bernardomg.api.response;
+
+import com.bernardomg.api.pagination.PageData;
+
+/**
+ * Paginated response to the frontend.
+ *
+ * @author Bernardo Mart&iacute;nez Garrido
+ *
+ * @param <T>
+ *            response content type
+ */
+public interface PaginatedResponse<T> extends Response<T> {
+
+    public PageData getPageData();
+
+}

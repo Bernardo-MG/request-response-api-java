@@ -21,8 +21,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**
- * Response model.
- */
 
-package com.bernardomg.api.response;
+package com.bernardomg.api.sort;
+
+/**
+ * Property used for sorting. Including direction.
+ *
+ * @author Bernardo Mart&iacute;nez Garrido
+ *
+ */
+public interface Sort {
+
+    public String getDirection();
+
+    public String getProperty();
+
+}

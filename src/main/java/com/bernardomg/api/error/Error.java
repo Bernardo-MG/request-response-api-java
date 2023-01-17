@@ -21,8 +21,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**
- * Response model.
- */
 
-package com.bernardomg.api.response;
+package com.bernardomg.api.error;
+
+/**
+ * Error response to the frontend.
+ *
+ * @author Bernardo Mart&iacute;nez Garrido
+ */
+public interface Error {
+
+    public String getContext();
+
+    public String getDetails();
+
+    public String getInstance();
+
+    public String getTitle();
+
+    public String getType();
+
+}

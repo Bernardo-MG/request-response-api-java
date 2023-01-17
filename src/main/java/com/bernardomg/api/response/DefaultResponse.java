@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2023 the original author or authors.
+ * Copyright (c) 2022 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,37 +22,61 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.api.response.test.unit;
+package com.bernardomg.api.response;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
+import java.util.Collection;
 
-import com.bernardomg.api.response.Greeter;
+import com.bernardomg.api.error.Error;
+import com.bernardomg.api.pagination.PageData;
+import com.bernardomg.api.sort.Sort;
+
+import lombok.Data;
+import lombok.NonNull;
 
 /**
- * Unit tests for {@link Greeter}.
- * <p>
- * This is just a placeholder test for the unit tests suite.
+ * Default implementation of the paginated response.
  *
- * @author Bernardo Martínez Garrido
+ * @author Bernardo Mart&iacute;nez Garrido
  *
+ * @param <T>
+ *            response content type
  */
-public final class TestGreeter {
+@Data
+public final class DefaultResponse<T> implements PaginatedResponse<T>, ErrorResponse<T>, SortedResponse<T> {
+
+    /**
+     * Response content.
+     */
+    @NonNull
+    private T                content;
+
+    private Error            error;
+
+    private PageData         pageData;
+
+    private String           path;
+
+    private Collection<Sort> sorting;
+
+    private Integer          status;
 
     /**
      * Default constructor.
      */
-    public TestGreeter() {
+    public DefaultResponse() {
         super();
     }
 
     /**
-     * Tests that the {@code Greeter} returns a greeting.
+     * Constructs a response with the specified content.
+     *
+     * @param cont
+     *            content
      */
-    @Test
-    public final void sayHello() {
-        Assertions.assertEquals("Hello World!", new Greeter().sayHello());
+    public DefaultResponse(@NonNull final T cont) {
+        super();
+
+        content = cont;
     }
 
 }

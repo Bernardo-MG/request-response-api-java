@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2023 the original author or authors.
+ * Copyright (c) 2022 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,37 +22,25 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.api.response.test.integration;
+package com.bernardomg.api.response;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
+import com.bernardomg.api.sort.Sort;
 
-import com.bernardomg.api.response.Greeter;
+import lombok.Data;
+import lombok.NonNull;
 
-/**
- * Integration tests for {@link Greeter}.
- * <p>
- * This is actually a placeholder test for the integration tests suite.
- *
- * @author Bernardo Martínez Garrido
- *
- */
-public final class ITGreeter {
+@Data
+public class ImmutableSort implements Sort {
 
-    /**
-     * Default constructor.
-     */
-    public ITGreeter() {
+    private String direction;
+
+    private String property;
+
+    public ImmutableSort(@NonNull final String prop, @NonNull final String dir) {
         super();
-    }
 
-    /**
-     * Tests that the {@code Greeter} returns a greeting.
-     */
-    @Test
-    public final void sayHello() {
-        Assertions.assertEquals("Hello World!", new Greeter().sayHello());
+        property = prop;
+        direction = dir;
     }
 
 }

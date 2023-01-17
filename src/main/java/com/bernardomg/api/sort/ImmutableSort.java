@@ -22,9 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.api.response;
-
-import com.bernardomg.api.sort.Sort;
+package com.bernardomg.api.sort;
 
 import lombok.Data;
 import lombok.NonNull;

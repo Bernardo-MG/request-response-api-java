@@ -22,11 +22,10 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.api.response;
+package com.bernardomg.api.pagination;
 
 import java.util.ArrayList;
 
-import com.bernardomg.api.pagination.PageData;
 import com.bernardomg.api.sort.Sort;
 
 import lombok.Data;

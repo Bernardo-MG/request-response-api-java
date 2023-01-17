@@ -30,6 +30,7 @@ import com.bernardomg.api.error.Error;
 import com.bernardomg.api.pagination.PageData;
 import com.bernardomg.api.sort.Sort;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -42,6 +43,7 @@ import lombok.NonNull;
  *            response content type
  */
 @Data
+@Builder
 public final class DefaultResponse<T> implements PaginatedResponse<T>, ErrorResponse<T>, SortedResponse<T> {
 
     /**
@@ -59,24 +61,5 @@ public final class DefaultResponse<T> implements PaginatedResponse<T>, ErrorResp
     private Collection<Sort> sorting;
 
     private Integer          status;
-
-    /**
-     * Default constructor.
-     */
-    public DefaultResponse() {
-        super();
-    }
-
-    /**
-     * Constructs a response with the specified content.
-     *
-     * @param cont
-     *            content
-     */
-    public DefaultResponse(@NonNull final T cont) {
-        super();
-
-        content = cont;
-    }
 
 }

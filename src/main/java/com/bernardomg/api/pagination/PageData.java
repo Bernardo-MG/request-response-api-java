@@ -30,9 +30,6 @@ import com.bernardomg.api.sort.Sort;
  * Paginated response to the frontend.
  *
  * @author Bernardo Mart&iacute;nez Garrido
- *
- * @param <T>
- *            response content type
  */
 public interface PageData {
 

@@ -19,13 +19,13 @@
    <!-- ********************************************** -->
 
    <groupId>com.bernardomg</groupId>
-   <artifactId>response-api-java</artifactId>
+   <artifactId>request-response-api-java</artifactId>
    <version>0.0.1-SNAPSHOT</version>
    <packaging>jar</packaging>
 
    <name>Response API for Java</name>
    <description>A simple response API for Java applications.</description>
-   <url>https://github.com/bernardo-mg/response-api-java</url>
+   <url>https://github.com/bernardo-mg/request-response-api-java</url>
    <inceptionYear>2023</inceptionYear>
 
    <licenses>
@@ -66,20 +66,20 @@
    <!-- ********************************************** -->
 
    <scm>
-      <connection>scm:git:https://github.com/bernardo-mg/response-api-java.git</connection>
-      <developerConnection>scm:git:https://github.com/bernardo-mg/response-api-java.git</developerConnection>
+      <connection>scm:git:https://github.com/bernardo-mg/request-response-api-java.git</connection>
+      <developerConnection>scm:git:https://github.com/bernardo-mg/request-response-api-java.git</developerConnection>
       <tag>head</tag>
-      <url>https://www.github.com/bernardo-mg/response-api-java</url>
+      <url>https://www.github.com/bernardo-mg/request-response-api-java</url>
    </scm>
 
    <issueManagement>
       <system>GitHub</system>
-      <url>https://www.github.com/bernardo-mg/response-api-java/issues</url>
+      <url>https://www.github.com/bernardo-mg/request-response-api-java/issues</url>
    </issueManagement>
 
    <ciManagement>
       <system>Github</system>
-      <url>https://www.github.com/bernardo-mg/response-api-java/actions</url>
+      <url>https://www.github.com/bernardo-mg/request-response-api-java/actions</url>
       <notifiers />
    </ciManagement>
 
@@ -116,7 +116,7 @@
                <!-- Github repository -->
                <id>github</id>
                <name>GitHub Packages</name>
-               <url>https://maven.pkg.github.com/bernardo-mg/response-api-java</url>
+               <url>https://maven.pkg.github.com/bernardo-mg/request-response-api-java</url>
             </repository>
          </distributionManagement>
       </profile>

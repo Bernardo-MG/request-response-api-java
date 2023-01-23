@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2022 the original author or authors.
+ * Copyright (c) 2023 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,84 +24,69 @@
 
 package com.bernardomg.api.pagination;
 
-import java.util.ArrayList;
-
 import com.bernardomg.api.sort.Sort;
 
-import lombok.Data;
-import lombok.NonNull;
-
 /**
- * Default implementation of the paginated response.
+ * Page information.
  *
  * @author Bernardo Mart&iacute;nez Garrido
- *
- * @param <T>
- *            response content type
  */
-@Data
-public final class DefaultPageData<T> implements PageData {
-
-    /**
-     * Response content.
-     */
-    @NonNull
-    private T              content;
+public interface PageInformation {
 
     /**
      * Number of elements in the page.
+     *
+     * @return number of elements
      */
-    private Integer        elementsInPage = -1;
+    public Integer getElementsInPage();
 
     /**
      * Flags this is as the first page.
+     *
+     * @return {@code true} if this is the first page, {@code false} otherwise
      */
-    private Boolean        first          = false;
+    public Boolean getFirst();
 
     /**
      * Flags this is as the last page.
+     *
+     * @return {@code true} if this is the last page, {@code false} otherwise
      */
-    private Boolean        last           = false;
+    public Boolean getLast();
 
     /**
      * Number of this page.
+     *
+     * @return the number of this page
      */
-    private Integer        page           = -1;
+    public Integer getPage();
 
     /**
      * Size of this page.
+     *
+     * @return the size of this page.
      */
-    private Integer        size           = -1;
+    public Integer getSize();
 
-    private Iterable<Sort> sort           = new ArrayList<>();
+    /**
+     * Properties used for sorting.
+     *
+     * @return properties used for sorting
+     */
+    public Iterable<Sort> getSort();
 
     /**
      * Total number of elements among all the pages.
+     *
+     * @return the total number of elements
      */
-    private Long           totalElements  = -1L;
+    public Long getTotalElements();
 
     /**
      * Total number of pages.
-     */
-    private Integer        totalPages     = -1;
-
-    /**
-     * Default constructor.
-     */
-    public DefaultPageData() {
-        super();
-    }
-
-    /**
-     * Constructs a response with the specified content.
      *
-     * @param cont
-     *            content
+     * @return the total number of pages
      */
-    public DefaultPageData(@NonNull final T cont) {
-        super();
-
-        content = cont;
-    }
+    public Integer getTotalPages();
 
 }

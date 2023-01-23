@@ -177,6 +177,7 @@
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
+      <api.error.version>0.1.0-SNAPSHOT</api.error.version>
       <junit.jupiter.version>5.9.1</junit.jupiter.version>
       <mockito.version>4.9.0</mockito.version>
       <log4j.version>2.19.0</log4j.version>
@@ -217,6 +218,15 @@
    </dependencyManagement>
 
    <dependencies>
+      <!-- ============================================== -->
+      <!-- =================== API ====================== -->
+      <!-- ============================================== -->
+      <dependency>
+         <!-- Error API -->
+         <groupId>com.bernardomg</groupId>
+         <artifactId>error-api-java</artifactId>
+         <version>${api.error.version}</version>
+      </dependency>
       <!-- ============================================== -->
       <!-- ================== LOGGERS =================== -->
       <!-- ============================================== -->

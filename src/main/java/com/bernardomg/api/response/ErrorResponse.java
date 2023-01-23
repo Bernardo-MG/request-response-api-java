@@ -24,7 +24,7 @@
 
 package com.bernardomg.api.response;
 
-import com.bernardomg.api.error.Error;
+import com.bernardomg.api.validation.error.ErrorDetails;
 
 /**
  * Error response to the frontend.
@@ -33,5 +33,5 @@ import com.bernardomg.api.error.Error;
  */
 public interface ErrorResponse<T> extends Response<T> {
 
-    public Error getError();
+    public ErrorDetails getError();
 }

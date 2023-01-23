@@ -26,9 +26,9 @@ package com.bernardomg.api.response;
 
 import java.util.Collection;
 
-import com.bernardomg.api.error.Error;
 import com.bernardomg.api.pagination.PageInformation;
 import com.bernardomg.api.sort.Sort;
+import com.bernardomg.api.validation.error.ErrorDetails;
 
 import lombok.Builder;
 import lombok.Data;
@@ -52,7 +52,7 @@ public final class DefaultResponse<T> implements PaginatedResponse<T>, ErrorResp
     @NonNull
     private T                content;
 
-    private Error            error;
+    private ErrorDetails     error;
 
     private PageInformation  pageData;
 

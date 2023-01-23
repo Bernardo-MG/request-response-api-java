@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2022 the original author or authors.
+ * Copyright (c) 2023 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ package com.bernardomg.api.response;
 import java.util.Collection;
 
 import com.bernardomg.api.error.Error;
-import com.bernardomg.api.pagination.PageData;
+import com.bernardomg.api.pagination.PageInformation;
 import com.bernardomg.api.sort.Sort;
 
 import lombok.Builder;
@@ -54,7 +54,7 @@ public final class DefaultResponse<T> implements PaginatedResponse<T>, ErrorResp
 
     private Error            error;
 
-    private PageData         pageData;
+    private PageInformation  pageData;
 
     private String           path;
 
